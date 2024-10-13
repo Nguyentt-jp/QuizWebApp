@@ -13,7 +13,7 @@ export default function Header() {
                     <Nav className="me-auto">
                         <NavLink className="nav-link" to="/">Home</NavLink>
                         <NavLink className="nav-link" to="/user">User</NavLink>
-                        <NavLink className="nav-link" to="/admin">Admin</NavLink>
+                        <NavLink className="nav-link" to="/admins">Admin</NavLink>
                     </Nav>
                     <Nav>
                         <button className="btn-login">LogIn</button>

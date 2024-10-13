@@ -4,6 +4,8 @@ import {Menu, MenuItem, ProSidebar, SidebarContent, SidebarFooter, SidebarHeader
 import 'react-pro-sidebar/dist/css/styles.css'
 import {DiReact} from "react-icons/di";
 import {VscGithub} from "react-icons/vsc";
+import {Link} from "react-router-dom";
+import ManagerUser from "./Content/ManagerUser";
 
 export default function Sidebar(props) {
     const {image, rtl, collapsed, toggled, handleToggleSidebar} = props
@@ -38,14 +40,15 @@ export default function Sidebar(props) {
                 <Menu iconShape="circle">
                     <MenuItem
                         icon={<FaTachometerAlt/>}
-                        suffix={<span className="badge red">New</span>}
+                        //suffix={<span className="badge red">New</span>}
                     >
                         Dashboard
+                        <Link to="/admins"/>
                     </MenuItem>
-                    <MenuItem icon={<FaGem/>}> Component</MenuItem>
+                    {/*<MenuItem icon={<FaGem/>}> Component</MenuItem>*/}
                 </Menu>
                 <Menu iconShape="circle">
-                    <SubMenu
+                    {/*<SubMenu
                         suffix={<span className="badge yellow">3</span>}
                         title='withSuffix'
                         icon={<FaRegLaughWink/>}
@@ -53,15 +56,17 @@ export default function Sidebar(props) {
                         <MenuItem>Submenu 1</MenuItem>
                         <MenuItem>Submenu 2</MenuItem>
                         <MenuItem>Submenu 3</MenuItem>
-                    </SubMenu>
+                    </SubMenu>*/}
                     <SubMenu
-                        prefix={<span className="badge gray">3</span>}
-                        title='withPrefix'
+                        //prefix={<span className="badge gray">3</span>}
+                        title='Tính Năng'
                         icon={<FaHeart/>}
                     >
-                        <MenuItem>Submenu 1</MenuItem>
-                        <MenuItem>Submenu 2</MenuItem>
-                        <MenuItem>Submenu 3</MenuItem>
+                        <MenuItem>Quản Lý User
+                            <Link to="manage-user"/>
+                        </MenuItem>
+                        <MenuItem>Quản Lý Câu Hỏi</MenuItem>
+                        <MenuItem>Quản Lý Bài Quiz</MenuItem>
                     </SubMenu>
 
                 </Menu>

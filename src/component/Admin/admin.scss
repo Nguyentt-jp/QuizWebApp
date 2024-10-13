@@ -38,6 +38,12 @@
 
     }
     .admin-content{
-
+    width: 100%;
+        .admin-content-header{
+            border: 1px solid;
+        }
+        .admin-content-main{
+            border: 1px solid red;
+        }
     }
 }
